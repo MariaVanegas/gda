@@ -1,5 +1,5 @@
 import { c as create_ssr_component, d as add_attribute, e as escape, f as each, v as validate_component, a as subscribe } from "../../../chunks/index.js";
-import { t } from "../../../chunks/store.js";
+import { g as galleryUrl, t } from "../../../chunks/store.js";
 const GalleryElement_svelte_svelte_type_style_lang = "";
 const css$2 = {
   code: ".gallery-div.svelte-ewwq37{box-sizing:border-box;display:grid;padding:30px;grid-gap:15px;grid-template-columns:1fr 1fr;cursor:pointer;background:var(--fill);height:100%}.gallery-img.svelte-ewwq37{width:100%;height:200px;border-radius:10px;object-fit:cover}.right.svelte-ewwq37{display:flex;flex-flow:column;justify-content:end}.gallery-name.svelte-ewwq37{font-family:var(--headfont);font-size:16px}.gallery-description.svelte-ewwq37{font-size:16px}",
@@ -7,10 +7,13 @@ const css$2 = {
 };
 const GalleryElement = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { data } = $$props;
+  let { i } = $$props;
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
+  if ($$props.i === void 0 && $$bindings.i && i !== void 0)
+    $$bindings.i(i);
   $$result.css.add(css$2);
-  return `<a class="${"clean-link"}" href="${"../proyecto"}"><div class="${"gallery-div svelte-ewwq37"}"><div class="${"left"}"><img class="${"gallery-img no-select svelte-ewwq37"}"${add_attribute("alt", data.nombreFamilia, 0)}${add_attribute("src", data.fotoPrototipo, 0)}></div>
+  return `<a class="${"clean-link"}"${add_attribute("href", `../proyecto/?p=${i + 1}`, 0)}><div class="${"gallery-div svelte-ewwq37"}"><div class="${"left"}"><img class="${"gallery-img no-select svelte-ewwq37"}"${add_attribute("alt", data.nombreFamilia, 0)}${add_attribute("src", data.fotoPrototipo, 0)}></div>
     <div class="${"right svelte-ewwq37"}"><h1 class="${"gallery-name svelte-ewwq37"}">${escape(data.nombreFamilia)}</h1>
       <p class="${"gallery-description svelte-ewwq37"}">${escape(data.Subtitulo)}</p></div></div>
 </a>`;
@@ -25,12 +28,13 @@ const Gallery = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.mainData === void 0 && $$bindings.mainData && mainData !== void 0)
     $$bindings.mainData(mainData);
   $$result.css.add(css$1);
-  return `${mainData ? `<div><div class="${"gallery-container svelte-jutxzt"}"><div class="${"gallery-title svelte-jutxzt"}"><h1 class="${"svelte-jutxzt"}">\xA1 Mucha<br>l\xE1mpara !</h1>
-        <h2 class="${"svelte-jutxzt"}">COLECCI\xD3N 2022-2</h2>
-        <h2 class="${"svelte-jutxzt"}">DISE\xD1O INDUSTRIAL UEB</h2></div>
+  return `${mainData ? `<div><div class="${"gallery-container svelte-jutxzt"}"><div class="${"gallery-title svelte-jutxzt"}"><h1 class="${"no-select svelte-jutxzt"}">\xA1 Mucha<br>l\xE1mpara !</h1>
+        <h2 class="${"no-select svelte-jutxzt"}">COLECCI\xD3N 2022-2</h2>
+        <h2 class="${"no-select svelte-jutxzt"}">DISE\xD1O INDUSTRIAL UEB</h2></div>
       ${each(mainData, (data, i) => {
-    return `${validate_component(GalleryElement, "GalleryElement").$$render($$result, { data }, {}, {})}`;
-  })}</div></div>` : ``}`;
+    return `${validate_component(GalleryElement, "GalleryElement").$$render($$result, { data, i }, {}, {})}`;
+  })}
+      ${mainData.length % 2 === 0 ? `<div class="${"gallery-title svelte-jutxzt"}"></div>` : ``}</div></div>` : ``}`;
 });
 const MainPage_svelte_svelte_type_style_lang = "";
 const css = {
@@ -38,10 +42,14 @@ const css = {
   map: null
 };
 const MainPage = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $galleryUrl, $$unsubscribe_galleryUrl;
   let $t, $$unsubscribe_t;
+  $$unsubscribe_galleryUrl = subscribe(galleryUrl, (value) => $galleryUrl = value);
   $$unsubscribe_t = subscribe(t, (value) => $t = value);
+  console.log($galleryUrl);
   let mainData;
   $$result.css.add(css);
+  $$unsubscribe_galleryUrl();
   $$unsubscribe_t();
   return `<div class="${"top-menu svelte-tk1of1"}"><a class="${"menu-item clean-link svelte-tk1of1"}" href="${"./acerca"}">Acerca de</a></div>
 <header class="${"header"}"><h1 class="${"title no-select svelte-tk1of1"}">${escape($t.mainPage.title)}</h1></header>

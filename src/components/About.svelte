@@ -2,7 +2,7 @@
 
 <div class="about-container">
   <div class="top-menu-container">
-    <a href="./proyectos"><button>Home</button></a>
+    <a href="./proyectos"><button><img src="assets/home-01.png" alt="home"/></button></a>
   </div>
   
   <div class="title">
@@ -23,9 +23,23 @@
 </div>
 
 <style>
+  button {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 5px;
+  }
+
+  img {
+    width: 100%;
+  }
+
   .about-container {
     padding: 15px;
   }
+
   .title {
     padding: 110px 0px 0px 0px;
     display: grid;
@@ -34,6 +48,7 @@
     align-items: end;
     border-bottom: solid 1px var(--stroke);
   }
+
   h1 {
     margin: 0px;
     padding: 0px;

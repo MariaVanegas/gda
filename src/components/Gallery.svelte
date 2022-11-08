@@ -7,13 +7,16 @@
   <div>
     <div class="gallery-container">
       <div class="gallery-title">
-        <h1>¡ Mucha<br/>lámpara !</h1>
-        <h2>COLECCIÓN 2022-2</h2>
-        <h2>DISEÑO INDUSTRIAL UEB</h2>
+        <h1 class="no-select">¡ Mucha<br/>lámpara !</h1>
+        <h2 class="no-select">COLECCIÓN 2022-2</h2>
+        <h2 class="no-select">DISEÑO INDUSTRIAL UEB</h2>
       </div>
-      {#each mainData as data, i (i) }
-        <GalleryElement {data}/>
+      {#each mainData as data,i (i) }
+        <GalleryElement {data} {i}/>
       {/each}
+      {#if mainData.length % 2 === 0}
+        <div class="gallery-title"></div>
+      {/if}
     </div>
   </div>
 {/if}

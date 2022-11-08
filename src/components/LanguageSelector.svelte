@@ -15,7 +15,7 @@
   <div class="language-prompt-container no-select">
     <a class="clean-link" on:click={() => changeLanguage('English')} href="./proyectos">
       <h1>In English</h1>
-      <h2>Visita the virtual store</h2>
+      <h2>Visit the virtual store</h2>
     </a>
   </div>
 
@@ -32,6 +32,11 @@
   }
 
   .language-prompt-container {
+    padding: 15px;
     cursor: pointer;
+  }
+
+  .language-prompt-container:hover {
+    background: lightgray;
   }
 </style>

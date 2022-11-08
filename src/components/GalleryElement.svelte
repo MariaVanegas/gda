@@ -1,8 +1,9 @@
 <script>
   export let data;
+  export let i;
 </script>
 
-<a class="clean-link" href="../proyecto">
+<a class="clean-link" href={`../proyecto/?p=${i+1}`}>
   <div class="gallery-div">
     <div class="left">
       <img class="gallery-img no-select" alt={data.nombreFamilia} src={data.fotoPrototipo}/>

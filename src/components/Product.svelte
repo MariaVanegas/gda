@@ -22,8 +22,6 @@
 <style>
   img {
     width: 100%;
-    /* max-height: 20vw; */
-    border: red 1px solid;
     object-fit: cover;
   }
 

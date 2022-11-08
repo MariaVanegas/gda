@@ -1,17 +1,31 @@
 <script>
+  import { blockUrl, lang } from '../stores/store';
   import Product from './Product.svelte';
-  // import { page } from '$app/stores';
+  import { page } from '$app/stores';
   import { csv } from "d3-fetch";
   import { onMount } from "svelte";
 
   let data;
-  let row = 1;
+  let fullData;
+  let row;
+  let param = $page.url.searchParams.get('p');
 
-  const url = 'https://docs.google.com/spreadsheets/d/1XLPHogssjVbDPgosBZ0uxGn8exd1ZgnNdPUonwrzYjA/export?format=csv&gid=1112919751';
+  $: {
+    row = param || 1;
+    row = param <= 0 ? 1 : param;
+  }
+
+  async function changeLanguage(l) {
+    $lang = l
+    fullData = await loadData($blockUrl);
+    data = fullData[row];
+    if (data === undefined) history.back();
+  }
 
   onMount(async () => {
-    data = (await loadData(url))[row];
-    console.log(data);
+    fullData = await loadData($blockUrl);
+    data = fullData[row];
+    if (data === undefined) history.back();
   })
 
   async function loadData(path) {
@@ -19,15 +33,33 @@
     return data
   }
 
-  // console.log($page.url.searchParams.get('p'));
+  async function nextPage() {
+    row = +row + 1;
+    row = row > fullData.length - 1 ? 1 : row;
+  }
+
+  function prevPage() {
+    row = +row - 1;
+    row = row <= 1 ? fullData.length - 1 : row;
+  }
 </script>
 
 {#if data}
   <div class="blocks-container">
     <div class="top-menu-container">
-      <a href="./proyectos"><button>Home</button></a>
-      <button>←</button>
-      <button>→</button>
+      <div>
+        <a href={`./proyecto?p=${row}`} target="_self"><button on:click={prevPage}><img src="assets/ant-01.png" alt="home"/></button></a>
+        <a href="./proyectos"><button><img src="assets/home-01.png" alt="home"/></button></a>
+        <a href={`./proyecto?p=${row}`} target="_self"><button on:click={nextPage}><img src="assets/sig-01.png" alt="home"/></button></a>
+      </div>
+      <div>
+        <ul>
+          <!-- svelte-ignore a11y-click-events-have-key-events -->
+          <li on:click={() => changeLanguage('Español')}>Español</li>
+          <!-- svelte-ignore a11y-click-events-have-key-events -->
+          <li on:click={() => changeLanguage('English')}>English</li>
+        </ul>
+      </div>
     </div>
 
     <div class="full-height">
@@ -133,10 +165,23 @@
 
 
 <style>
+  button {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background: lightgray;
+  }
+
   img {
     width: 100%;
     object-fit: cover;
-    border: red 1px solid;
+    /* border: red 1px solid; */
   }
 
   iframe {
@@ -153,7 +198,18 @@
 
   .top-menu-container {
     display: flex;
+    justify-content: space-between;
     gap: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  li:hover {
+    background: lightgray;
   }
 
   .full-height {

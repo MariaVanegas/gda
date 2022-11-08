@@ -1,13 +1,14 @@
 <script>
-  import { t } from '../stores/store';
+  import { t, galleryUrl } from '../stores/store';
   import Gallery from './Gallery.svelte';
   import { csv } from "d3-fetch";
   import { onMount } from "svelte";
 
+  console.log($galleryUrl);
+
   let mainData;
-  const url = 'https://docs.google.com/spreadsheets/d/1XLPHogssjVbDPgosBZ0uxGn8exd1ZgnNdPUonwrzYjA/export?format=csv&gid=0';
   onMount(async () => {
-    mainData = (await loadData(url)).slice(1);
+    mainData = (await loadData($galleryUrl))//.slice(1);
   })
 
   async function loadData(path) {
