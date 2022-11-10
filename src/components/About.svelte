@@ -59,12 +59,7 @@
     padding: 0px;
     font-size: 50px;
   }
-
-  .title p {
-    padding: 20px;
-    margin: 0px;
-  }
-
+  
   .about-text {
     display: grid;
     grid-template-columns: 50% 50%;

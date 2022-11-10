@@ -1,16 +1,16 @@
 import { c as create_ssr_component, v as validate_component } from "../../../chunks/index.js";
 const About_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "button.svelte-efkheg.svelte-efkheg{width:50px;height:50px;cursor:pointer;background:none;border:none;border-radius:5px}img.svelte-efkheg.svelte-efkheg{width:100%}.about-container.svelte-efkheg.svelte-efkheg{padding:15px}.title.svelte-efkheg.svelte-efkheg{padding:110px 0px 0px 0px;display:grid;grid-template-columns:1.5fr 1fr;grid-gap:35px;align-items:end;border-bottom:solid 1px var(--stroke)}h1.svelte-efkheg.svelte-efkheg{margin:0px;padding:0px;font-size:50px}.about-text.svelte-efkheg.svelte-efkheg{display:grid;grid-template-columns:50% 50%;grid-gap:35px}.about-text.svelte-efkheg .left.svelte-efkheg{border-right:solid 1px var(--stroke);padding:0px 20px 0px 10px}",
+  code: "button.svelte-j9i9ih.svelte-j9i9ih{width:50px;height:50px;cursor:pointer;background:none;border:none;border-radius:5px}img.svelte-j9i9ih.svelte-j9i9ih{width:100%}.about-container.svelte-j9i9ih.svelte-j9i9ih{padding:15px}.title.svelte-j9i9ih.svelte-j9i9ih{padding:110px 0px 0px 0px;display:grid;grid-template-columns:1.5fr 1fr;grid-gap:35px;align-items:end;border-bottom:solid 1px var(--stroke)}h1.svelte-j9i9ih.svelte-j9i9ih{margin:0px;padding:0px;font-size:50px}.about-text.svelte-j9i9ih.svelte-j9i9ih{display:grid;grid-template-columns:50% 50%;grid-gap:35px}.about-text.svelte-j9i9ih .left.svelte-j9i9ih{border-right:solid 1px var(--stroke);padding:0px 20px 0px 10px}",
   map: null
 };
 const About = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<div class="${"about-container svelte-efkheg"}"><div class="${"top-menu-container"}"><a href="${"./"}"><button class="${"svelte-efkheg"}"><img src="${"assets/home-01.png"}" alt="${"home"}" class="${"svelte-efkheg"}"></button></a></div>
+  return `<div class="${"about-container svelte-j9i9ih"}"><div class="${"top-menu-container"}"><a href="${"./"}"><button class="${"svelte-j9i9ih"}"><img src="${"assets/home-01.png"}" alt="${"home"}" class="${"svelte-j9i9ih"}"></button></a></div>
   
-  <div class="${"title svelte-efkheg"}"><h1 class="${"svelte-efkheg"}">Acerca de...</h1></div>
+  <div class="${"title svelte-j9i9ih"}"><h1 class="${"svelte-j9i9ih"}">Acerca de...</h1></div>
 
-  <div class="${"about-text svelte-efkheg"}"><div class="${"left svelte-efkheg"}"><h2>Gesti\xF3n de artesan\xEDas</h2>
+  <div class="${"about-text svelte-j9i9ih"}"><div class="${"left svelte-j9i9ih"}"><h2>Gesti\xF3n de artesan\xEDas</h2>
       <p>La producci\xF3n a peque\xF1a escala, incluso la artesanal, est\xE1 influenciada por cambios en el contexto, como la masificaci\xF3n de tecnolog\xEDas de fabricaci\xF3n r\xE1pida, el acceso a redes sociales y el comercio virtual. As\xED, se crean escenarios donde es posible redefinir el valor que el dise\xF1o industrial puede aportar.
       </p>
       <p>Los dos escenarios planteados en el ejercicio principal de este semestre fueron: 1. La experiencia directa con la transformaci\xF3n de materiales y 2. La creaci\xF3n de piezas de presentaci\xF3n de un nuevo producto.
