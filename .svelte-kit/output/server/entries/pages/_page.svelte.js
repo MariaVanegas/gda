@@ -10,10 +10,10 @@ const LanguageSelector = create_ssr_component(($$result, $$props, $$bindings, sl
   $$unsubscribe_lang = subscribe(lang, (value) => value);
   $$result.css.add(css);
   $$unsubscribe_lang();
-  return `<div class="${"language-selector-container svelte-ikub14"}"><div class="${"language-prompt-container no-select svelte-ikub14"}"><a class="${"clean-link"}" href="${"./proyectos"}"><h1>En Espa\xF1ol</h1>
+  return `<div class="${"language-selector-container svelte-ikub14"}"><div class="${"language-prompt-container no-select svelte-ikub14"}"><a class="${"clean-link"}" href="${"./gda/proyectos"}"><h1>En Espa\xF1ol</h1>
       <h2>Visita la tienda virtual</h2></a></div>
 
-  <div class="${"language-prompt-container no-select svelte-ikub14"}"><a class="${"clean-link"}" href="${"./proyectos"}"><h1>In English</h1>
+  <div class="${"language-prompt-container no-select svelte-ikub14"}"><a class="${"clean-link"}" href="${"./gda/proyectos"}"><h1>In English</h1>
       <h2>Visit the virtual store</h2></a></div>
 
 </div>`;

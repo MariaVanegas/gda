@@ -13,7 +13,7 @@ const GalleryElement = create_ssr_component(($$result, $$props, $$bindings, slot
   if ($$props.i === void 0 && $$bindings.i && i !== void 0)
     $$bindings.i(i);
   $$result.css.add(css$2);
-  return `<a class="${"clean-link"}"${add_attribute("href", `../proyecto/?p=${i + 1}`, 0)}><div class="${"gallery-div svelte-ewwq37"}"><div class="${"left"}"><img class="${"gallery-img no-select svelte-ewwq37"}"${add_attribute("alt", data.nombreFamilia, 0)}${add_attribute("src", data.fotoPrototipo, 0)}></div>
+  return `<a class="${"clean-link"}"${add_attribute("href", `../gda/proyecto/?p=${i + 1}`, 0)}><div class="${"gallery-div svelte-ewwq37"}"><div class="${"left"}"><img class="${"gallery-img no-select svelte-ewwq37"}"${add_attribute("alt", data.nombreFamilia, 0)}${add_attribute("src", data.fotoPrototipo, 0)}></div>
     <div class="${"right svelte-ewwq37"}"><h1 class="${"gallery-name svelte-ewwq37"}">${escape(data.nombreFamilia)}</h1>
       <p class="${"gallery-description svelte-ewwq37"}">${escape(data.Subtitulo)}</p></div></div>
 </a>`;

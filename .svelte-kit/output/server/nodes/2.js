@@ -2,6 +2,6 @@
 
 export const index = 2;
 export const component = async () => (await import('../entries/pages/_page.svelte.js')).default;
-export const file = '_app/immutable/components/pages/_page.svelte-b31cd4fa.js';
-export const imports = ["_app/immutable/components/pages/_page.svelte-b31cd4fa.js","_app/immutable/chunks/index-c9961eb2.js","_app/immutable/chunks/store-2e65b504.js","_app/immutable/chunks/index-1f4c6286.js"];
-export const stylesheets = ["_app/immutable/assets/_page-7cc416e6.css"];
+export const file = 'app/immutable/components/pages/_page.svelte-e6eaa878.js';
+export const imports = ["app/immutable/components/pages/_page.svelte-e6eaa878.js","app/immutable/chunks/index-e72038ff.js","app/immutable/chunks/store-5f9fd335.js","app/immutable/chunks/index-99e8deb0.js"];
+export const stylesheets = ["app/immutable/assets/_page-7cc416e6.css"];

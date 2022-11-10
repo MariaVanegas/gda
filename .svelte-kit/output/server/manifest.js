@@ -1,10 +1,10 @@
 export const manifest = {
-	appDir: "_app",
-	appPath: "_app",
+	appDir: "app",
+	appPath: "gda/app",
 	assets: new Set([".DS_Store","assets/ant-01.png","assets/home-01.png","assets/sig-01.png","favicon.png"]),
 	mimeTypes: {".png":"image/png"},
 	_: {
-		entry: {"file":"_app/immutable/start-56ff94e7.js","imports":["_app/immutable/start-56ff94e7.js","_app/immutable/chunks/index-c9961eb2.js","_app/immutable/chunks/singletons-6c8ec5e9.js","_app/immutable/chunks/index-1f4c6286.js"],"stylesheets":[]},
+		entry: {"file":"app/immutable/start-35a3ba10.js","imports":["app/immutable/start-35a3ba10.js","app/immutable/chunks/index-e72038ff.js","app/immutable/chunks/singletons-f32e40c5.js","app/immutable/chunks/index-99e8deb0.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),

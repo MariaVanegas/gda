@@ -6,14 +6,14 @@
 <div class="language-selector-container">
 
   <div class="language-prompt-container no-select">
-    <a class="clean-link" on:click={() => changeLanguage('Español')} href="./proyectos">
+    <a class="clean-link" on:click={() => changeLanguage('Español')} href="./gda/proyectos">
       <h1>En Español</h1>
       <h2>Visita la tienda virtual</h2>
     </a>
   </div>
 
   <div class="language-prompt-container no-select">
-    <a class="clean-link" on:click={() => changeLanguage('English')} href="./proyectos">
+    <a class="clean-link" on:click={() => changeLanguage('English')} href="./gda/proyectos">
       <h1>In English</h1>
       <h2>Visit the virtual store</h2>
     </a>
