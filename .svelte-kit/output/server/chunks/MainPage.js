@@ -42,11 +42,10 @@ const css = {
   map: null
 };
 const MainPage = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $galleryUrl, $$unsubscribe_galleryUrl;
+  let $$unsubscribe_galleryUrl;
   let $t, $$unsubscribe_t;
-  $$unsubscribe_galleryUrl = subscribe(galleryUrl, (value) => $galleryUrl = value);
+  $$unsubscribe_galleryUrl = subscribe(galleryUrl, (value) => value);
   $$unsubscribe_t = subscribe(t, (value) => $t = value);
-  console.log($galleryUrl);
   let mainData;
   $$result.css.add(css);
   $$unsubscribe_galleryUrl();

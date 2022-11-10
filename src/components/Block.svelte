@@ -7,13 +7,16 @@
 
   let data;
   let fullData;
-  let row;
+  
   let param = $page.url.searchParams.get('p');
+  let row = param || 1;
 
   $: {
     row = param || 1;
-    row = param <= 0 ? 1 : param;
+    // row = param <= 0 ? 1 : param;
   }
+
+  console.log(param, row);
 
   async function changeLanguage(l) {
     $lang = l
@@ -33,7 +36,7 @@
     return data
   }
 
-  async function nextPage() {
+  function nextPage() {
     row = +row + 1;
     row = row > fullData.length - 1 ? 1 : row;
   }
@@ -41,6 +44,12 @@
   function prevPage() {
     row = +row - 1;
     row = row <= 1 ? fullData.length - 1 : row;
+  }
+
+  function getNexPage() {
+    let nextP = +row + 1;
+    nextP = nextP > fullData.length - 1 ? 1 : nextP;
+    return nextP
   }
 </script>
 
@@ -50,7 +59,7 @@
       <div>
         <a href={`./proyecto?p=${row}`} target="_self"><button on:click={prevPage}><img src="assets/ant-01.png" alt="home"/></button></a>
         <a href="./"><button><img src="assets/home-01.png" alt="home"/></button></a>
-        <a href={`./proyecto?p=${row}`} target="_self"><button on:click={nextPage}><img src="assets/sig-01.png" alt="home"/></button></a>
+        <a href={`./proyecto?p=${getNexPage()}`} target="_self"><button><img src="assets/sig-01.png" alt="home"/></button></a>
       </div>
       <div>
         <ul>
@@ -161,8 +170,6 @@
     
   </div>
 {/if}
-
-
 
 <style>
   button {

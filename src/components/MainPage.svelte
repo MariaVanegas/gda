@@ -4,8 +4,6 @@
   import { csv } from "d3-fetch";
   import { onMount } from "svelte";
 
-  console.log($galleryUrl);
-
   let mainData;
   onMount(async () => {
     mainData = (await loadData($galleryUrl)).slice(1);
