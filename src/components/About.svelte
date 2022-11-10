@@ -7,15 +7,22 @@
   
   <div class="title">
     <h1>Acerca de...</h1>
-    <p>fdsdfsdf</p>
   </div>
 
   <div class="about-text">
     <div class="left">
       <h2>Gestión de artesanías</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum neque eget malesuada mollis. Nunc eu elit vitae elit viverra scelerisque et a lorem. Nam quis pellentesque ex. Pellentesque euismod, ipsum sed ultrices sollicitudin, massa dolor pulvinar orci, in congue massa odio quis urna. Proin vitae lorem orci. Cras lacinia blandit ex, et tristique libero feugiat ac. 
-        Sed id orci eros. Praesent mollis lorem id ornare facilisis. Curabitur porttitor neque velit, a volutpat metus ultricies ut. Quisque ut metus quis diam vulputate viverra. Proin ligula justo, commodo sit amet felis at, convallis volutpat erat. Fusce id ultrices turpis.
+        La producción a pequeña escala, incluso la artesanal, está influenciada por cambios en el contexto, como la masificación de tecnologías de fabricación rápida, el acceso a redes sociales y el comercio virtual. Así, se crean escenarios donde es posible redefinir el valor que el diseño industrial puede aportar.
+      </p>
+      <p>
+        Los dos escenarios planteados en el ejercicio principal de este semestre fueron: 1. La experiencia directa con la transformación de materiales y 2. La creación de piezas de presentación de un nuevo producto.
+      </p>
+      <p>
+        Los estudiantes definieron un usuario para su propuesta, en el que identificaron los aspectos principales a nivel de estética y función necesarios para satisfacer a ese usuario teórico. En cuanto a la fabricación, se realizó un proceso similar al que tiene lugar en la artesanía urbana o contemporánea, caracterizado por la aplicación de una técnica o material con posibilidades novedosas, favoreciendo siempre la producción de series cortas, bien sea a través de elementos tangibles como moldes y planos o el aprovechamiento de intangibles como el conocimiento vinculado a cada etapa del proceso de obtención y la destreza en la realización de una técnica.
+      </p>
+      <p>
+        Los estudiantes fueron los protagonistas del proceso de prototipado, que los enfrentó a las limitaciones y potencialidades de sus propuestas y así descubrieron, a través de la experiencia directa, los factores que influyen en la definición formal de una propuesta de producto acorde con las posibilidades de un entorno con baja industrialización pero con alta recursividad y capacidad creadora.
       </p>
     </div>
     <div></div>

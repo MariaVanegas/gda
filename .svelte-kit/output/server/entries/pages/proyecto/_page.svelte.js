@@ -14,15 +14,8 @@ const Block = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_blockUrl = subscribe(blockUrl, (value) => value);
   $$unsubscribe_lang = subscribe(lang, (value) => value);
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
-  let param = $page.url.searchParams.get("p");
-  let row = param || 1;
-  console.log(param, row);
+  $page.url.searchParams.get("p");
   $$result.css.add(css);
-  {
-    {
-      row = param || 1;
-    }
-  }
   $$unsubscribe_blockUrl();
   $$unsubscribe_lang();
   $$unsubscribe_page();
