@@ -2,4 +2,6 @@
   import MainPage from '../components/MainPage.svelte';
 </script>
 
-<MainPage/>
+<!-- <MainPage/> -->
+
+<h1>Test</h1>

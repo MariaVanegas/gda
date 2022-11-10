@@ -1,5 +1,3 @@
-
-
 <div class="about-container">
   <div class="top-menu-container">
     <a href="./"><button><img src="assets/home-01.png" alt="home"/></button></a>
