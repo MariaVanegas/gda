@@ -10,7 +10,7 @@ const config = {
 		paths: {
       base: '/gda'
     },
-		appDir: 'app'
+		appDir: 'site'
 	}
 };
 
