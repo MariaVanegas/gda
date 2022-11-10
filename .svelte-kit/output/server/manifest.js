@@ -1,10 +1,10 @@
 export const manifest = {
-	appDir: "app",
-	appPath: "app",
+	appDir: "_app",
+	appPath: "_app",
 	assets: new Set([".DS_Store","assets/ant-01.png","assets/home-01.png","assets/sig-01.png","favicon.png"]),
 	mimeTypes: {".png":"image/png"},
 	_: {
-		entry: {"file":"app/immutable/start-296b3e2e.js","imports":["app/immutable/start-296b3e2e.js","app/immutable/chunks/index-e72038ff.js","app/immutable/chunks/singletons-3e7047b9.js","app/immutable/chunks/index-99e8deb0.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-b14c5166.js","imports":["_app/immutable/start-b14c5166.js","_app/immutable/chunks/index-c9961eb2.js","_app/immutable/chunks/singletons-3adb7f64.js","_app/immutable/chunks/index-1f4c6286.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),

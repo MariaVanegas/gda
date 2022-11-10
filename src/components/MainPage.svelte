@@ -8,7 +8,7 @@
 
   let mainData;
   onMount(async () => {
-    mainData = (await loadData($galleryUrl))//.slice(1);
+    mainData = (await loadData($galleryUrl)).slice(1);
   })
 
   async function loadData(path) {
