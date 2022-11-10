@@ -6,7 +6,7 @@ const css = {
 };
 const About = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<div class="${"about-container svelte-efkheg"}"><div class="${"top-menu-container"}"><a href="${"./proyectos"}"><button class="${"svelte-efkheg"}"><img src="${"assets/home-01.png"}" alt="${"home"}" class="${"svelte-efkheg"}"></button></a></div>
+  return `<div class="${"about-container svelte-efkheg"}"><div class="${"top-menu-container"}"><a href="${"./"}"><button class="${"svelte-efkheg"}"><img src="${"assets/home-01.png"}" alt="${"home"}" class="${"svelte-efkheg"}"></button></a></div>
   
   <div class="${"title svelte-efkheg"}"><h1 class="${"svelte-efkheg"}">Acerca de...</h1>
     <p class="${"svelte-efkheg"}">fdsdfsdf</p></div>

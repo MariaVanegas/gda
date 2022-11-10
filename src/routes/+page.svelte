@@ -1,5 +1,5 @@
 <script>
-  import LanguageSelector from '../components/LanguageSelector.svelte';
+  import MainPage from '../components/MainPage.svelte';
 </script>
 
-<LanguageSelector/>
+<MainPage/>

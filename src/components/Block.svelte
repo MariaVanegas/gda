@@ -49,7 +49,7 @@
     <div class="top-menu-container">
       <div>
         <a href={`./proyecto?p=${row}`} target="_self"><button on:click={prevPage}><img src="assets/ant-01.png" alt="home"/></button></a>
-        <a href="./proyectos"><button><img src="assets/home-01.png" alt="home"/></button></a>
+        <a href="./"><button><img src="assets/home-01.png" alt="home"/></button></a>
         <a href={`./proyecto?p=${row}`} target="_self"><button on:click={nextPage}><img src="assets/sig-01.png" alt="home"/></button></a>
       </div>
       <div>
