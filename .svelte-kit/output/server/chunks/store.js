@@ -18,7 +18,7 @@ const translations = {
 const url = "https://docs.google.com/spreadsheets/d/1XLPHogssjVbDPgosBZ0uxGn8exd1ZgnNdPUonwrzYjA/export?format=csv&gid=";
 const galleryUrl = readable(url + "0");
 const lang = writable("Espa\xF1ol");
-const currentPage = writable(1);
+const currentPage = writable(2);
 const blockUrl = derived([lang], ($lang) => url + translations[$lang].gid);
 const t = derived([lang], ($lang) => translations[$lang]);
 readable(Object.keys(translations));

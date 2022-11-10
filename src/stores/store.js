@@ -22,7 +22,7 @@ const url = 'https://docs.google.com/spreadsheets/d/1XLPHogssjVbDPgosBZ0uxGn8exd
 export const galleryUrl = readable(url+'0');
 export const lang = writable("Español");
 
-export const currentPage = writable(1);
+export const currentPage = writable(2);
 
 export const blockUrl = derived([lang], ($lang) => url+translations[$lang].gid);
 

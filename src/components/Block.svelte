@@ -1,7 +1,6 @@
 <script>
   import { blockUrl, lang, currentPage } from '../stores/store';
   import Product from './Product.svelte';
-  import { page } from '$app/stores';
   import { csv } from "d3-fetch";
   import { onMount } from "svelte";
 
@@ -171,9 +170,11 @@
         <p>{data.precios}</p>
       </div>
 
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/4JkIs37a2JE" title="" frameborder="0"  allowfullscreen></iframe>
-      </div>
+      {#if data.linkYoutube}
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/{data.linkYoutube}" title="" frameborder="0"  allowfullscreen></iframe>
+        </div>
+      {/if}
     </div>
     
   </div>
