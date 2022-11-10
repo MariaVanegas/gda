@@ -16,7 +16,7 @@
 </script>
 
 <div class="top-menu">
-  <a class="menu-item clean-link" href="./gda/acerca">Acerca de</a>
+  <a class="menu-item clean-link" href="./acerca">Acerca de</a>
 </div>
 <header class="header">
   <h1 class="title no-select">{$t.mainPage.title}</h1>

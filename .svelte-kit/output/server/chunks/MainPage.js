@@ -50,7 +50,7 @@ const MainPage = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   $$result.css.add(css);
   $$unsubscribe_galleryUrl();
   $$unsubscribe_t();
-  return `<div class="${"top-menu svelte-tk1of1"}"><a class="${"menu-item clean-link svelte-tk1of1"}" href="${"./gda/acerca"}">Acerca de</a></div>
+  return `<div class="${"top-menu svelte-tk1of1"}"><a class="${"menu-item clean-link svelte-tk1of1"}" href="${"./acerca"}">Acerca de</a></div>
 <header class="${"header"}"><h1 class="${"title no-select svelte-tk1of1"}">${escape($t.mainPage.title)}</h1></header>
 <div class="${"gallery-container svelte-tk1of1"}">${validate_component(Gallery, "Gallery").$$render($$result, { mainData }, {}, {})}
 </div>`;
