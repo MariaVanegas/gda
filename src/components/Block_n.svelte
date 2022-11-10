@@ -7,12 +7,15 @@
 
   let data;
   let fullData;
-  let row;
+  
   let param = $page.url.searchParams.get('p');
+  let row = param || 1;
+  let nextP;
+  let prevP;
 
   $: {
     row = param || 1;
-    row = param <= 0 ? 1 : param;
+    // row = param <= 0 ? 1 : param;
   }
 
   async function changeLanguage(l) {
@@ -25,6 +28,8 @@
   onMount(async () => {
     fullData = await loadData($blockUrl);
     data = fullData[row];
+    nextP = getNextPage();
+    prevP = getPrevPage();
     if (data === undefined) history.back();
   })
 
@@ -33,7 +38,7 @@
     return data
   }
 
-  async function nextPage() {
+  function nextPage() {
     row = +row + 1;
     row = row > fullData.length - 1 ? 1 : row;
   }
@@ -42,15 +47,27 @@
     row = +row - 1;
     row = row <= 1 ? fullData.length - 1 : row;
   }
+
+  function getNextPage() {
+    let nextP = +row + 1;
+    nextP = nextP > fullData.length - 1 ? 1 : nextP;
+    return nextP
+  }
+
+  function getPrevPage() {
+    let prevP = +row - 1;
+    prevP = prevP <= 1 ? fullData.length - 1 : prevP;
+    return prevP
+  }
 </script>
 
 {#if data}
   <div class="blocks-container">
     <div class="top-menu-container">
       <div>
-        <a href={`./proyecto?p=${row}`} target="_self"><button on:click={prevPage}><img src="assets/ant-01.png" alt="home"/></button></a>
+        <a href={`./proyecto?p=${prevP}`} target="_self"><button><img src="assets/ant-01.png" alt="home"/></button></a>
         <a href="./"><button><img src="assets/home-01.png" alt="home"/></button></a>
-        <a href={`./proyecto?p=${row}`} target="_self"><button on:click={nextPage}><img src="assets/sig-01.png" alt="home"/></button></a>
+        <a href={`./proyecto?p=${nextP}`} target="_self"><button><img src="assets/sig-01.png" alt="home"/></button></a>
       </div>
       <div>
         <ul>
