@@ -1,11 +1,13 @@
-import { c as create_ssr_component, d as add_attribute, e as escape, f as each, v as validate_component, a as subscribe } from "../../chunks/index.js";
-import { g as galleryUrl, t } from "../../chunks/store.js";
+import { c as create_ssr_component, a as subscribe, d as add_attribute, e as escape, f as each, v as validate_component } from "../../chunks/index.js";
+import { c as currentPage, g as galleryUrl, t } from "../../chunks/store.js";
 const GalleryElement_svelte_svelte_type_style_lang = "";
 const css$2 = {
   code: ".gallery-div.svelte-ewwq37{box-sizing:border-box;display:grid;padding:30px;grid-gap:15px;grid-template-columns:1fr 1fr;cursor:pointer;background:var(--fill);height:100%}.gallery-img.svelte-ewwq37{width:100%;height:200px;border-radius:10px;object-fit:cover}.right.svelte-ewwq37{display:flex;flex-flow:column;justify-content:end}.gallery-name.svelte-ewwq37{font-family:var(--headfont);font-size:16px}.gallery-description.svelte-ewwq37{font-size:16px}",
   map: null
 };
 const GalleryElement = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $$unsubscribe_currentPage;
+  $$unsubscribe_currentPage = subscribe(currentPage, (value) => value);
   let { data } = $$props;
   let { i } = $$props;
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
@@ -13,7 +15,8 @@ const GalleryElement = create_ssr_component(($$result, $$props, $$bindings, slot
   if ($$props.i === void 0 && $$bindings.i && i !== void 0)
     $$bindings.i(i);
   $$result.css.add(css$2);
-  return `<a class="${"clean-link"}"${add_attribute("href", `./gda/proyecto/?p=${i + 1}`, 0)}><div class="${"gallery-div svelte-ewwq37"}"><div class="${"left"}"><img class="${"gallery-img no-select svelte-ewwq37"}"${add_attribute("alt", data.nombreFamilia, 0)}${add_attribute("src", data.fotoPrototipo, 0)}></div>
+  $$unsubscribe_currentPage();
+  return `<a class="${"clean-link"}"${add_attribute("href", `./gda/proyecto`, 0)}><div class="${"gallery-div svelte-ewwq37"}"><div class="${"left"}"><img class="${"gallery-img no-select svelte-ewwq37"}"${add_attribute("alt", data.nombreFamilia, 0)}${add_attribute("src", data.fotoPrototipo, 0)}></div>
     <div class="${"right svelte-ewwq37"}"><h1 class="${"gallery-name svelte-ewwq37"}">${escape(data.nombreFamilia)}</h1>
       <p class="${"gallery-description svelte-ewwq37"}">${escape(data.Subtitulo)}</p></div></div>
 </a>`;

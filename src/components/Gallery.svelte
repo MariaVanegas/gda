@@ -11,7 +11,7 @@
         <h2 class="no-select">COLECCIÓN 2022-2</h2>
         <h2 class="no-select">DISEÑO INDUSTRIAL UEB</h2>
       </div>
-      {#each mainData as data,i (i) }
+      {#each mainData as data, i (i) }
         <GalleryElement {data} {i}/>
       {/each}
       {#if mainData.length % 2 === 0}

@@ -1,10 +1,15 @@
 <script>
+  import { currentPage } from '../stores/store';
   export let data;
   export let i;
+
+  function moveToPage() {
+    $currentPage = +i+2;
+  }
 </script>
 
-<a class="clean-link" href={`./gda/proyecto/?p=${i+1}`}>
-  <div class="gallery-div">
+<a on:click={moveToPage} class="clean-link" href={`./gda/proyecto`}>
+  <div  class="gallery-div">
     <div class="left">
       <img class="gallery-img no-select" alt={data.nombreFamilia} src={data.fotoPrototipo}/>
     </div>

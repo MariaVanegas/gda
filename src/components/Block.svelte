@@ -1,5 +1,5 @@
 <script>
-  import { blockUrl, lang } from '../stores/store';
+  import { blockUrl, lang, currentPage } from '../stores/store';
   import Product from './Product.svelte';
   import { page } from '$app/stores';
   import { csv } from "d3-fetch";
@@ -8,14 +8,12 @@
   let data;
   let fullData;
   
-  let param = $page.url.searchParams.get('p');
-  let row = param || 1;
   let nextP;
   let prevP;
 
+  let row;
   $: {
-    row = param || 1;
-    // row = param <= 0 ? 1 : param;
+    row = $currentPage;
   }
 
   async function changeLanguage(l) {
@@ -38,14 +36,16 @@
     return data
   }
 
-  function nextPage() {
-    row = +row + 1;
-    row = row > fullData.length - 1 ? 1 : row;
+  async function advance() {
+    $currentPage = getNextPage();
+    fullData = await loadData($blockUrl);
+    data = fullData[row];
   }
 
-  function prevPage() {
-    row = +row - 1;
-    row = row <= 1 ? fullData.length - 1 : row;
+  async function reverse() {
+    $currentPage = getPrevPage();
+    fullData = await loadData($blockUrl);
+    data = fullData[row];
   }
 
   function getNextPage() {
@@ -65,9 +65,9 @@
   <div class="blocks-container">
     <div class="top-menu-container">
       <div>
-        <a href={`./proyecto?p=${prevP}`} target="_self"><button><img src="assets/ant-01.png" alt="home"/></button></a>
+        <button on:click={reverse}><img src="assets/ant-01.png" alt="home"/></button>
         <a href="./"><button><img src="assets/home-01.png" alt="home"/></button></a>
-        <a href={`./proyecto?p=${nextP}`} target="_self"><button><img src="assets/sig-01.png" alt="home"/></button></a>
+        <button on:click={advance}><img src="assets/sig-01.png" alt="home"/></button>
       </div>
       <div>
         <ul>

@@ -1,6 +1,5 @@
 import { c as create_ssr_component, a as subscribe, v as validate_component } from "../../../chunks/index.js";
-import { b as blockUrl, l as lang } from "../../../chunks/store.js";
-import { p as page } from "../../../chunks/stores.js";
+import { b as blockUrl, c as currentPage, l as lang } from "../../../chunks/store.js";
 const Product_svelte_svelte_type_style_lang = "";
 const Block_svelte_svelte_type_style_lang = "";
 const css = {
@@ -9,16 +8,15 @@ const css = {
 };
 const Block = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$unsubscribe_blockUrl;
+  let $$unsubscribe_currentPage;
   let $$unsubscribe_lang;
-  let $page, $$unsubscribe_page;
   $$unsubscribe_blockUrl = subscribe(blockUrl, (value) => value);
+  $$unsubscribe_currentPage = subscribe(currentPage, (value) => value);
   $$unsubscribe_lang = subscribe(lang, (value) => value);
-  $$unsubscribe_page = subscribe(page, (value) => $page = value);
-  $page.url.searchParams.get("p");
   $$result.css.add(css);
   $$unsubscribe_blockUrl();
+  $$unsubscribe_currentPage();
   $$unsubscribe_lang();
-  $$unsubscribe_page();
   return `${``}`;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
