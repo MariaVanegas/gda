@@ -10,7 +10,7 @@ const config = {
 		paths: {
       base: ''
     },
-		appDir: 'docs'
+		appDir: 'app'
 	}
 };
 
