@@ -47,6 +47,7 @@
   }
 
   function getNexPage() {
+    return 1
     let nextP = +row + 1;
     nextP = nextP > fullData.length - 1 ? 1 : nextP;
     return nextP
