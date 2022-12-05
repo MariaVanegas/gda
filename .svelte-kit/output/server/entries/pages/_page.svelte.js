@@ -41,7 +41,7 @@ const Gallery = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const MainPage_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".top-menu.svelte-tk1of1{padding:15px;display:flex;justify-content:end}.menu-item.svelte-tk1of1{color:var(--stroke);font-size:20px;cursor:pointer}.title.svelte-tk1of1{padding:10px;margin:0px;font-size:22px;text-decoration:underline;color:var(--fill);background:var(--stroke)}.gallery-container.svelte-tk1of1{padding:25px}",
+  code: ".top-menu.svelte-ru04ua{padding:15px;display:flex;justify-content:end}.menu-item.svelte-ru04ua{color:var(--stroke);font-size:20px;cursor:pointer}.title.svelte-ru04ua{padding:10px;margin:0px;font-size:22px;text-decoration:underline;color:var(--fill);background:var(--stroke)}.title.svelte-ru04ua:hover{color:lightgray}a.svelte-ru04ua{text-decoration:none}.gallery-container.svelte-ru04ua{padding:25px}",
   map: null
 };
 const MainPage = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -54,9 +54,9 @@ const MainPage = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   $$result.css.add(css);
   $$unsubscribe_galleryUrl();
   $$unsubscribe_t();
-  return `<div class="${"top-menu svelte-tk1of1"}"><a class="${"menu-item clean-link svelte-tk1of1"}" href="${"./gda/acerca"}">Acerca de</a></div>
-<header class="${"header"}"><h1 class="${"title no-select svelte-tk1of1"}">${escape($t.mainPage.title)}</h1></header>
-<div class="${"gallery-container svelte-tk1of1"}">${validate_component(Gallery, "Gallery").$$render($$result, { mainData }, {}, {})}
+  return `<div class="${"top-menu svelte-ru04ua"}"><a class="${"menu-item clean-link svelte-ru04ua"}" href="${"./gda/acerca"}">Acerca de</a></div>
+<header class="${"header"}"><a href="${"https://forms.gle/aGFP9d44jM6K5nf46"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-ru04ua"}"><h1 class="${"title no-select svelte-ru04ua"}">${escape($t.mainPage.title)}</h1></a></header>
+<div class="${"gallery-container svelte-ru04ua"}">${validate_component(Gallery, "Gallery").$$render($$result, { mainData }, {}, {})}
 </div>`;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {

@@ -21,7 +21,7 @@
   <a class="menu-item clean-link" href="./gda/acerca">Acerca de</a>
 </div>
 <header class="header">
-  <h1 class="title no-select">{$t.mainPage.title}</h1>
+  <a href="https://forms.gle/aGFP9d44jM6K5nf46" target="_blank" rel="noreferrer"><h1 class="title no-select">{$t.mainPage.title}</h1></a>
 </header>
 <div class="gallery-container">
   <Gallery {mainData}/>
@@ -47,6 +47,14 @@
     text-decoration: underline;
     color: var(--fill);
     background: var(--stroke);
+  }
+
+  .title:hover {
+    color: lightgray;
+  }
+
+  a {
+    text-decoration: none;
   }
   
   .gallery-container {

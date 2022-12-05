@@ -11,16 +11,13 @@
     <div class="left">
       <h2>Gestión de artesanías</h2>
       <p>
-        La producción a pequeña escala, incluso la artesanal, está influenciada por cambios en el contexto, como la masificación de tecnologías de fabricación rápida, el acceso a redes sociales y el comercio virtual. Así, se crean escenarios donde es posible redefinir el valor que el diseño industrial puede aportar.
+        Hemos entendido la gestión de un proyecto de diseño para la artesanía como un proceso en el que la exploración y el reconocimiento de recursos humanos y técnicos disponibles en el contexto, permite la creación de nuevos objetos con potencial de productos.
       </p>
       <p>
-        Los dos escenarios planteados en el ejercicio principal de este semestre fueron: 1. La experiencia directa con la transformación de materiales y 2. La creación de piezas de presentación de un nuevo producto.
+        Los proyectos realizados por los estudiantes están enmarcados en el método de producción denominado artesanía contemporánea, el cual está cada vez más extendido por su flexibilidad, pues al no depender de organizaciones robustas o de grandes capitales, impulsa la generación de empleo y nutre la cultura material de cada región a la par que abre escenarios de innovación en materiales, técnicas y el rol que los diseñadores pueden tener.
       </p>
       <p>
-        Los estudiantes definieron un usuario para su propuesta, en el que identificaron los aspectos principales a nivel de estética y función necesarios para satisfacer a ese usuario teórico. En cuanto a la fabricación, se realizó un proceso similar al que tiene lugar en la artesanía urbana o contemporánea, caracterizado por la aplicación de una técnica o material con posibilidades novedosas, favoreciendo siempre la producción de series cortas, bien sea a través de elementos tangibles como moldes y planos o el aprovechamiento de intangibles como el conocimiento vinculado a cada etapa del proceso de obtención y la destreza en la realización de una técnica.
-      </p>
-      <p>
-        Los estudiantes fueron los protagonistas del proceso de prototipado, que los enfrentó a las limitaciones y potencialidades de sus propuestas y así descubrieron, a través de la experiencia directa, los factores que influyen en la definición formal de una propuesta de producto acorde con las posibilidades de un entorno con baja industrialización pero con alta recursividad y capacidad creadora.
+        Los prototipos presentados hoy son el resumen y la evidencia del criterio de los diseñadores en formación, que partiendo de una lista de objetivos de proyecto, se dieron a la tarea de resolver, a través de un concepto de familia de lámparas, cuestiones como: la selección de materiales, la búsqueda de proveedores, la ejecución de técnicas manuales, la inclusión de recursos tecnológicos y las estéticas que tienen la intención de comunicar su percepción de nuestro entorno natural y cultural.
       </p>
     </div>
     <div></div>
